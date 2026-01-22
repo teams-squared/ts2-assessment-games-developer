@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instructions | Games Developer</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+      :root {
+        --primary: #7f27a4;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--primary);
+        margin: 0;
+      }
+
+      section#note {
+        background-color: #ffffff;
+        margin: 0 10vw;
+        padding: 1rem 2rem;
+      }
+
+      section#note > section {
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        border-left: 5px solid #ccc;
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      ol,
+      ul {
+        line-height: 1.5;
+      }
+
+      li {
+        margin: 1rem 0;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: var(--primary);
+        border-bottom: 2px solid var(--primary);
+        margin: 0;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        border-bottom: 1px solid black;
+      }
+
+      h3 {
+        color: var(--primary);
+      }
+
+      span.label {
+        background-color: var(--primary);
+        padding: 0 10px;
+        color: white;
+        margin-right: 0.5rem;
+        font-weight: bold;
+      }
+
+      span.important-tag {
+        background-color: #ff0000;
+        padding: 0 10px;
+        color: white;
+        font-weight: bold;
+      }
+
+      p.important-tag {
+        background-color: #ff0000;
+        padding: 0 10px;
+        color: white;
+        font-weight: bold;
+      }
+
+      span.important {
+        color: #ff0000;
+        font-weight: bold;
+      }
+
+      div#image-container img {
+        height: 550px;
+        border-radius: 0.5rem;
+        object-fit: cover;
+      }
+
+      code,
+      pre {
+        font-size: 1rem;
+        font-weight: bold;
+        background-color: #ccc;
+        padding: 0 5px;
+      }
+
+      p.muted {
+        color: #777;
+        margin-top: 5px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      @media only screen and (max-width: 1000px) {
+        section#note {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="note">
+      <header>
+        <h1>Instructions for Games Developer Technical Assessment</h1>
+        <p>
+          <span class="label">Goal</span>Complete a technical assessment
+          demonstrating Java / JVM fundamentals and systems thinking through
+          reasoning questions and practical coding tasks.
+        </p>
+        <p>
+          <span class="label">Score</span>Based on correctness, clarity of
+          reasoning, tradeoffs, and code quality.
+        </p>
+        <p><span class="label">Maximum Time</span>60 minutes</p>
+        <p>
+          <span class="label">Allowed</span>Java, Clojure, or clear pseudocode
+        </p>
+        <p>
+          <span class="important"
+            >If any detail is underspecified, state your assumptions and
+            proceed. Correctness matters, but clarity of reasoning and tradeoffs
+            matter more.</span
+          >
+        </p>
+      </header>
+
+      <section>
+        <h2>Project Details</h2>
+        <h3>Description</h3>
+        <ul>
+          <li>
+            This assessment evaluates your understanding of
+            <b>Java / JVM fundamentals and systems thinking</b> through a
+            combination of reasoning questions and practical coding tasks.
+          </li>
+          <li>
+            You will be asked to reason about memory representation, performance
+            optimization, debugging strategies, data structures, and algorithm
+            design.
+          </li>
+          <li>
+            The assessment is divided into three main sections covering
+            reasoning, data structures, and advanced technical tasks.
+          </li>
+        </ul>
+        <h3>Your Role</h3>
+        <ul>
+          <li>
+            As part of this assessment, you will answer reasoning questions and
+            implement or describe solutions to technical problems.
+          </li>
+          <li>
+            All tasks have been described
+            <b>step-by-step</b> below. Simply follow these steps to complete the
+            assessment.
+          </li>
+          <li>
+            You may use Java, Clojure, or clear pseudocode for coding tasks.
+            Bullet points are fine for reasoning questions where appropriate.
+          </li>
+        </ul>
+        <h3>Tech Stack</h3>
+        <ul>
+          <li>
+            <span class="label">Java / JVM</span> You'll work with Java or
+            Clojure on the JVM, focusing on memory management, object
+            allocation, and performance considerations.
+          </li>
+          <li>
+            <span class="label">Data Structures</span> You'll design and
+            implement data structures for 3D grids, considering time complexity
+            and memory optimization.
+          </li>
+          <li>
+            <span class="label">Algorithms</span> You'll describe algorithms for
+            ray traversal and grid operations.
+          </li>
+          <li>
+            <span class="label">Game Development</span> You'll demonstrate
+            understanding of real-time game loops, asset pipelines, and 3D model
+            integration.
+          </li>
+          <li>
+            <span class="label">Version Control</span> Git and GitHub are used
+            to host this project's repository and for submitting your work.
+          </li>
+          <li>
+            Since this assessment will primarily use Git & GitHub, you will need
+            <b>a GitHub account</b> and some experience working with the Git
+            CLI.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Task 1 - Setting up your development environment</h2>
+        <ol>
+          <li>
+            Fork
+            <a href="https://github.com/teams-squared/games-developer"
+              >this GitHub repository</a
+            >
+            onto your personal GitHub account and
+            <b>clone it to your machine</b> - this folder contains the structure
+            for the assessment you will be working on.
+            <span class="important"
+              >The time allocation (max. 60 minutes) will start from the point
+              you fork this repository.</span
+            >
+          </li>
+          <li>
+            Navigate to this repo's folder from your machine. Inside this folder
+            you will find the assessment structure. This is where you will spend
+            your time writing answers and code. You can ignore the folder named
+            <code>/instructions</code>.
+            <ul>
+              <li>
+                <b
+                  >Ensure that you only edit / append code to the respective
+                  files within these folders which have been specified in the
+                  instructions. Do not change any other files, as this may
+                  result in our test scripts failing to score your
+                  submission.</b
+                >
+              </li>
+              <li>
+                Your final submission will be made as a <b>pull request</b> to
+                <a href="https://github.com/Amresh-Augments/games-developer"
+                  >this Github repository</a
+                >. You will receive your score as a comment to this pull request
+                on GitHub itself.
+              </li>
+              <li>
+                Feel free to commit and push regularly to your personal fork of
+                our repository. However, only submit a pull request to our
+                GitHub repository
+                <b>after you complete the entire assessment.</b>
+              </li>
+            </ul>
+          </li>
+          <li>Open the repo's folder using your favorite text editor / IDE.</li>
+          <li>
+            Set up your development environment with Java or Clojure as needed.
+            Ensure you have a JVM installed and can compile and run code.
+          </li>
+          <li>
+            The tasks below will specify if any <b>additional files</b> need to
+            be added to this directory or its subdirectories.
+            <b>Don't add any additional files otherwise.</b>
+          </li>
+        </ol>
+        <span class="important"
+          >Task 1 is now complete. You may now move on to Task 2.</span
+        >
+      </section>
+
+      <section>
+        <h2>Task 2 - Reasoning & Systems Thinking</h2>
+        <span class="label">Spend around 20 minutes</span>
+        <p>
+          Answer concisely. Bullet points are fine where appropriate. Write your
+          answers in the appropriate files as specified below.
+        </p>
+        <ol>
+          <li>
+            <h3>Q1. Memory representation & tradeoffs</h3>
+            <p>
+              You need to represent a very large 3D world where
+              <b>most cells are empty</b>.
+            </p>
+            <ul>
+              <li>
+                Describe <b>two different ways</b> you could store this data in
+                memory.
+              </li>
+              <li>
+                For each approach, explain:
+                <ul>
+                  <li>When it works well.</li>
+                  <li>When it becomes problematic.</li>
+                </ul>
+              </li>
+            </ul>
+            <p class="muted">
+              <span class="important"
+                >Do not assume any engine or framework.</span
+              >
+            </p>
+            <p class="muted">
+              Write your answer for this question in the
+              <code>task2/question1.md</code> Markdown file.
+            </p>
+          </li>
+          <li>
+            <h3>Q2. JVM references, allocation, and real-time loops</h3>
+            <p>In a real-time game loop running on the JVM:</p>
+            <ul>
+              <li>
+                Explain how <b>object allocation and references</b> can affect
+                performance.
+              </li>
+              <li>
+                Describe <b>two concrete practices</b> you would use to keep
+                frame times stable.
+              </li>
+            </ul>
+            <p class="muted">Keep the answer practical, not theoretical.</p>
+            <p class="muted">
+              Write your answer for this question in the
+              <code>task2/question2.md</code> Markdown file.
+            </p>
+          </li>
+          <li>
+            <h3>Q3. Performance debugging under ambiguity</h3>
+            <p>
+              A player reports sudden frame-time spikes when moving the camera.
+            </p>
+            <p>
+              Without seeing the code, list the <b>first few things</b> you
+              would check, in order.
+            </p>
+            <p>
+              For each, briefly state
+              <b>what you are trying to confirm or rule out</b>.
+            </p>
+            <p class="muted">
+              Write your answer for this question in the
+              <code>task2/question3.md</code> Markdown file.
+            </p>
+          </li>
+        </ol>
+        <span class="important"
+          >Task 2 is now complete. Commit and push your work to your personal
+          forked repository. You may now move on to Task 3.</span
+        >
+      </section>
+
+      <section>
+        <h2>Task 3 - Data Structures</h2>
+        <span class="label">Spend around 15 minutes</span>
+        <p>You are working with a fixed-size 3D grid:</p>
+        <ul>
+          <li><code>width = 32</code></li>
+          <li><code>height = 32</code></li>
+          <li><code>depth = 32</code></li>
+        </ul>
+        <p>Each cell stores a single integer value.</p>
+        <ol>
+          <li>Propose a <b>data structure</b> to store this grid in memory.</li>
+          <li>
+            Write (or describe in pseudocode):
+            <ul>
+              <li><code>get(x, y, z)</code></li>
+              <li><code>set(x, y, z, value)</code></li>
+            </ul>
+          </li>
+          <li>
+            State:
+            <ul>
+              <li>Time complexity of each operation.</li>
+              <li>
+                One <b>optimization</b> you would apply if most cells are empty.
+              </li>
+            </ul>
+          </li>
+          <p class="muted">You may assume all coordinates are zero-based.</p>
+        </ol>
+        <p class="muted">
+          Write your solution for this task in the
+          <code>task3.md</code> Markdown file.
+        </p>
+        <span class="important"
+          >Task 3 is now complete. Commit and push your work to your personal
+          forked repository. You may now move on to Task 4.</span
+        >
+      </section>
+
+      <section>
+        <h2>Task 4 - Ray Traversal + Asset Integration Integration</h2>
+        <span class="label">Spend around 30 minutes</span>
+        <ol>
+          <li>
+            <h3>Part A - Grid Ray Traversal</h3>
+            <p>You are given a <b>2D grid</b> where:</p>
+            <ul>
+              <li><code>0</code> = empty cell</li>
+              <li><code>1</code> = solid cell</li>
+            </ul>
+            <p>A ray is defined by:</p>
+            <ul>
+              <li>Origin <code>(x0, y0)</code> (floating point).</li>
+              <li>Direction <code>(dx, dy)</code> (normalized).</li>
+            </ul>
+            <h3>Task</h3>
+            <p>
+              Describe an algorithm (code or pseudocode) that returns the
+              <b>first solid cell</b> the ray intersects, or
+              <code>null</code> if none is hit.
+            </p>
+            <p>Your answer should include:</p>
+            <ul>
+              <li>How the ray advances through the grid.</li>
+              <li>How boundaries are handled.</li>
+              <li>Why this approach is efficient.</li>
+            </ul>
+            <p class="muted">Exact math precision is not required.</p>
+            <p class="muted">
+              Write your solution for Part A in the
+              <code>task4/part-a.md</code> Markdown file.
+            </p>
+          </li>
+          <li>
+            <h3>Part B - Integrating Blender assets into a custom engine</h3>
+            <p>
+              You are importing models created in <b>Blender</b> into a custom
+              game engine.
+            </p>
+            <p>Answer the following:</p>
+            <ol>
+              <li>
+                When exporting a static 3D model from Blender, list
+                <b>three technical aspects</b> you would verify or adjust before
+                integration.
+                <ul>
+                  <li>
+                    Use correct terminology (e.g., transforms, UVs, normals,
+                    etc.).
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Explain <b>one issue</b> that commonly occurs during asset
+                import and how you would diagnose it.
+              </li>
+              <li>
+                Briefly describe how you would structure an
+                <b>asset pipeline</b> so that artists can update models without
+                breaking the game.
+              </li>
+            </ol>
+            <p class="muted">Keep answers concise and practical.</p>
+            <p class="muted">
+              Write your solution for Part B in the
+              <code>task4/part-b.md</code> Markdown file.
+            </p>
+          </li>
+        </ol>
+        <p class="important-tag">
+          Congratulations on completing this assessment! You may now submit a
+          pull request (ensuring that all local changes have been pushed) to the
+          main repository from your forked repository to confirm your
+          submission.
+        </p>
+        <p class="important-tag">
+          Make sure to include your name in the pull request message, along with
+          any additional details in a README.md if you wish to explain / comment
+          on any of the solutions for the previous tasks.
+        </p>
+      </section>
+    </section>
+  </body>
+</html>

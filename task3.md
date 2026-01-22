@@ -1,0 +1,2 @@
+# Task 3: Data Structures
+<PLEASE WRITE YOUR ANSWER + ANY PSEUDOCODE HERE>

@@ -1,0 +1,2 @@
+# Task 4a: Grid Ray Traversal
+<PLEASE WRITE YOUR ANSWER + ANY PSEUDOCODE HERE>
